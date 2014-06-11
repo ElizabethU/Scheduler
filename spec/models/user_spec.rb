@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'associations' do
+    it 'returns meetings' do
+      expect(user.meetings).to be_an_instance_of Array
+    end
+  end
 end
