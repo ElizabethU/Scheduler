@@ -16,3 +16,5 @@
 /tmp
 
 /coverage
+#ignore vim swap files
+*.swp
