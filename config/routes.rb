@@ -1,6 +1,10 @@
 Scheduler::Application.routes.draw do
 
   root "welcome#home"
+  get "meetings/new"
+  get "meetings/edit"
+  get "meetings", to: 'meetings#index', as: 'meetings'
+  get "meetings/show"
   get "users/new"
   get "users/edit"
   get "users/show"
