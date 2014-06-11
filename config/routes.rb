@@ -1,8 +1,19 @@
 Scheduler::Application.routes.draw do
+
+  root "welcome#home"
+  resources :users
+  resources :sessions
+  get "meetings/new"
+  get "meetings/edit"
+  get "meetings", to: 'meetings#index', as: 'meetings'
+  get "meetings/:id", to: 'meetings#show', as: 'meeting'
+  get "sign_up" => "sessions#new", :as => "sign_up"
+
   get "execs/new"
   get "execs/edit"
   get "execs/show"
-  get "execs/index"
+  get "execs" => "execs#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
