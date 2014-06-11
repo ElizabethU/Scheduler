@@ -1,8 +1,8 @@
 Scheduler::Application.routes.draw do
-  get "execs/new"
-  get "execs/edit"
-  get "execs/show"
-  get "execs/index"
+  # get "execs/new"
+  # get "execs/edit"
+  # get "execs/show"
+  get "/execs", to: "execs#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
