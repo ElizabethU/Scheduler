@@ -1,5 +1,10 @@
 Scheduler::Application.routes.draw do
 
+  root "welcome#home"
+  get "users/new"
+  get "users/edit"
+  get "users/show"
+  get "users/index"
   get "execs/new"
   get "execs/edit"
   get "execs/show"
