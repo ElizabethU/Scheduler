@@ -2,11 +2,11 @@
 <div class="underscore"><br>
 <div class="container">
   <h4><%= link_to "Search Executives for Meeting Times", execs_path %></h4>
-  <%= month_calendar events: @meetings do |date, events| %>
+  <%= month_calendar events: @meetings do |date, meetings| %>
     <%= date %>
-      <% events.each do |event| %>
+      <% meetings.each do |meeting| %>
         <div>
-          <%= event.start %>
+          <%= link_to meeting.start, meeting_path(meeting) %>
         </div>
       <% end %>
   <% end %>
