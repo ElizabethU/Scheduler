@@ -1,0 +1,13 @@
+<h2>Meetings</h2>
+<div class="underscore"><br>
+<div class="container">
+  <h4><%= link_to "Search Executives for Meeting Times", execs_path %></h4>
+  <%= month_calendar events: @meetings do |date, events| %>
+    <%= date %>
+      <% events.each do |event| %>
+        <div>
+          <%= event.start %>
+        </div>
+      <% end %>
+  <% end %>
+</div>
