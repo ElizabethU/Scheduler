@@ -1,14 +1,12 @@
 Scheduler::Application.routes.draw do
 
   root "welcome#home"
+  resources :users
   get "meetings/new"
   get "meetings/edit"
   get "meetings", to: 'meetings#index', as: 'meetings'
   get "meetings/show"
-  get "users/new"
-  get "users/edit"
-  get "users/show"
-  get "users/index"
+
   get "execs/new"
   get "execs/edit"
   get "execs/show"
