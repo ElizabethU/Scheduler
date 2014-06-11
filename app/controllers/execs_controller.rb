@@ -15,5 +15,6 @@ class ExecsController < ApplicationController
   end
 
   def index
+    @execs = Exec.all
   end
 end
