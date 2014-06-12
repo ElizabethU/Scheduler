@@ -2,16 +2,26 @@
   position: fixed;
   height: 100%;
   width: 100%;
+  z-index: 998;
   display: none;
 
 }
 
+.modal-background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
 .modal-container .content {
+  position: fixed;
   width: 30%;
-  margin: 100px auto;
+  left: 35%;
+  /*margin: 100px auto;*/
   border: 1px solid black;
   padding: 50px;
   padding-top: 20px;
+  z-index: 999;
 }
 
 .modal-container .content input {
