@@ -6,6 +6,7 @@
     <%= date %>
       <% meetings.each do |meeting| %>
         <div>
+          <%= link_to meeting.exec.name, meeting_path(meeting) %>
           <%= link_to meeting.start, meeting_path(meeting) %>
         </div>
       <% end %>
