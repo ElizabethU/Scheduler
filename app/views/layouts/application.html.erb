@@ -7,17 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div>
-    <% if current_user %>
-      <li>Signed in as:<br><%= link_to "#{current_user.name}", user_path(current_user) %></li>
-        <alt= 'Username'>
-      <li><%= link_to "Sign out", "/logout" %></li>
-    <% else %>
-      <li class='login open-modal'><%= link_to "Log In", "/login" %></li>
-      <li><%= link_to "Register!", sign_up_path %></li>
-    <% end %>
-  </div>
-  <%= flash.notice %>
+  <%= render "layouts/banner" %>
+
+  <div class='flash'><%= flash.notice %></div>
   <%= yield %>
 
 </body>

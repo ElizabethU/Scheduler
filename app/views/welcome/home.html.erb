@@ -2,6 +2,8 @@
 	<div class='modal-background close-modal'>
 	</div>
 	<div class='content'>
+		<a href="#" class="btn btn-default exit-modal close-modal">Close</a>
+
 		<h1>Log in</h1>
 
 		<%= form_tag sessions_path do %>
@@ -19,6 +21,6 @@
 		<% end %>
 
 		(New user? <%= link_to "Sign up", sign_up_path %>.)
-		<a href="#" class="close-modal"> Close </a>
+
 	</div>
 </div>
