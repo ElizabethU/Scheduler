@@ -9,8 +9,8 @@ Scheduler::Application.routes.draw do
   get "meetings"       =>'meetings#index',     as: 'meetings'
   get "meetings/:id"   =>'meetings#show',      as: 'meeting'
   get "sign_up"        => "users#new",         as: "sign_up"
-  get "sign_in"        => "sessions#new",      as: "sign_in"
-  get "/logout"        => "sessions#destroy",  as: "sign_out"
+  get "/login"         => "sessions#new",      as: "login"
+  get "/logout"        => "sessions#destroy",  as: "logout"
 
 
   get "execs/new"
