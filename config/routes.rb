@@ -13,7 +13,7 @@ Scheduler::Application.routes.draw do
   get "/logout"        => "sessions#destroy",  as: "logout"
 
 
-  get "execs/new"
+  get "execs/new", to: 'execs#new', as: 'new_exec'
   get "execs/edit"
   get "execs/show"
   get "execs"         => "execs#index"
