@@ -5,10 +5,10 @@ describe 'home page navigation' do
 
   it 'works' do
     visit "/"
-    click_link "Sign In"
+    click_link "Log In"
     fill_in "Email Address", with: user.email
     fill_in "Password", with: "MyString"
-    click_button "Sign In"
+    click_button "Log In"
     expect(current_path).to eq "/"
 
   end
