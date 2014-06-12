@@ -4,7 +4,6 @@
   width: 100%;
   z-index: 998;
   display: none;
-
 }
 
 .modal-background {
@@ -17,8 +16,8 @@
   position: fixed;
   width: 30%;
   left: 35%;
-  /*margin: 100px auto;*/
   border: 1px solid black;
+  border-radius: 20px;
   padding: 50px;
   padding-top: 20px;
   z-index: 999;
@@ -30,4 +29,20 @@
 
 .modal-container .content h1 {
   text-align: center;
+}
+
+.exit-modal {
+  float: right;
+}
+
+.current-user {
+  color: #04B431;
+}
+
+.current-user a {
+  color: white;
+}
+
+.current-user a:visited {
+  color: #BDBDBD;
 }

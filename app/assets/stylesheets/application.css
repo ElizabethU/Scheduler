@@ -11,3 +11,22 @@
  *= require_self
  *= require_tree .
  */
+
+ .navbar {
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
+    background: linear-gradient(to left, #0B3B17, transparent);
+ }
+
+ .nav-main {
+    font-size: 16px;
+    list-style-type: none;
+    padding: 10px;
+ }
+
+ .flash {
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+ }
