@@ -1,2 +1,6 @@
-Time: <%= @meeting.start.strftime("%A, %B %e, %l:%M %P")%><br>
-Executive: <%= @meeting.exec.name %>
+Date: <%= @meeting.start.strftime("%A, %B %e") %><br>
+Time: <%= @meeting.start.strftime("%l:%M %P") + " - " + (@meeting.start + 30.minutes).strftime("%l:%M %P")%><br>
+Executive: <%= @meeting.exec.name %><br>
+Available? <%= @meeting.user_id == nil %><br>
+<br>
+Add button to reserve this time.
