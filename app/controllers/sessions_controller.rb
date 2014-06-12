@@ -1,13 +1,17 @@
 class SessionsController < ApplicationController
 
+	def new
+	end
+
 	def create
 		user = User.find_by(email: params[:email])
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
+			flash[:notice] = "You have successfully signed in"
 			redirect_to meetings_path
 		else
-			flash.now.alert "Invalid username/password"
-			render "new"
+			flash[:notice] = "Invalid username/password"
+			redirect_to root_path
 		end
 	end
 
