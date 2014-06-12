@@ -17,6 +17,8 @@ group :doc do
 end
 
 group :development, :test do
+  gem "capybara"
+  gem "poltergeist"
   gem "rspec-rails"
   gem "guard-rspec"
   gem "factory_girl_rails"
