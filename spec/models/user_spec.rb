@@ -1,9 +1,10 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe User do
+  let(:user) { create :user }
   context 'associations' do
     it 'returns meetings' do
-      expect(user.meetings).to be_an_instance_of Array
+      expect(user).to respond_to :meetings
     end
   end
 end
