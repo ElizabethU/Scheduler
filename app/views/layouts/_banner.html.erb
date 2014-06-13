@@ -1,7 +1,7 @@
 <div class='navbar'>
   <ul class='nav-main'>
     <div class='nav-div icon'>
-      <%=image_tag "emc-isilon-logo.jpg", size: "100x100" %>
+      <%= link_to(image_tag("emc-isilon-logo.jpg", :alt => "EMC Isilon logo", size:'100x100', :title => "Click here to return to Home"), "/") %>
     </div>
     <div class='nav-div links'>
       <% if current_user %>
