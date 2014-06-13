@@ -1,12 +1,17 @@
 <div class='navbar'>
-  <ul class="nav-main">
-    <% if current_user %>
-      <li>
-        <span class='current-user'>Signed in as <%= link_to "#{current_user.name}", user_path(current_user) %></span>
-        <%= link_to "Sign out", "/logout", class: 'btn btn-default' %>
-      </li>
-    <% else %>
-      <li class='login open-modal'><%= link_to "Log In", "/login", class: 'btn btn-default'%></li>
-    <% end %>
+  <ul class='nav-main'>
+    <div class='nav-div icon'>
+      <%=image_tag "emc-isilon-logo.jpg", size: "100x100" %>
+    </div>
+    <div class='nav-div links'>
+      <% if current_user %>
+        <li>
+          <span class='current-user'>Signed in as <%= link_to "#{current_user.name}", user_path(current_user) %></span>
+          <%= link_to "Sign out", "/logout", class: 'btn btn-default' %>
+        </li>
+      <% else %>
+        <li class='login open-modal'><%= link_to "Log In", "/login", class: 'btn btn-default'%></li>
+      <% end %>
+    </div>
   </ul>
 </div>
