@@ -25,7 +25,11 @@
     padding: 10px;
  }
 
- .nav-links {
+ .nav-div {
+  width: 50%;
+  float: left;
+ }
+ .links {
     /*position: relative;*/
     text-align: right;
  }
