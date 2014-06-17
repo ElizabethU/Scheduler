@@ -5,7 +5,7 @@ FactoryGirl.define do
     start "2014-06-11 12:37:32"
     user_id 1
     exec_id 1
-    duration 1
+    duration 10
     location "MyString"
   end
 end
