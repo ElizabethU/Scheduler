@@ -20,10 +20,12 @@ class ExecsController < ApplicationController
   def update
   end
 
+  # shows executive's full schedule but only if an admin?
   def show
     @exec = Exec.find(params[:id])
   end
 
+  # index should show all available meeting times by executive
   def index
     @execs = Exec.all
   end

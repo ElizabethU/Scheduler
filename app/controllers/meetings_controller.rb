@@ -1,6 +1,9 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
+  # this is only for admins to create a slot for an exec. need before filter
+  # to check if user is an admin?
+
   def new
     @meeting = Meeting.new
     @execs = current_user.execs.alphabetize_array if current_user
