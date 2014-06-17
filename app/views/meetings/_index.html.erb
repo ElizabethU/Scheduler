@@ -5,7 +5,7 @@
         <% meetings.each do |meeting| %>
           <div>
             <%= link_to meeting.exec.name, meeting_path(meeting) %>
-            <%= link_to meeting.start.strftime('%I:%M %p'), meeting_path(meeting) %>
+            <%= link_to meeting.start.getlocal.strftime('%I:%M %p'), meeting_path(meeting) %>
           </div>
        <% end %>
     <% end %>
