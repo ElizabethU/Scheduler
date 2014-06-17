@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Scheduler</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render "layouts/banner" %>
+  <head>
+    <title>Scheduler</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render "layouts/banner" %>
 
-  <div class='flash'><%= flash.notice %></div>
-  <%= yield %>
+    <div class="flash text-center bg-warning"><%= flash.notice %></div>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
