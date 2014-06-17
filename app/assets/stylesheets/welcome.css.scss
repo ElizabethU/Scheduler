@@ -49,5 +49,16 @@
 }
 
 .sidebar {
-  border: 1px solid blue;
+  margin-top: 50px;
+  /*border: 1px solid black;*/
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  display: block;
+  padding: 5px;
+  font-size: 16px;
 }
