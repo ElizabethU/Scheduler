@@ -1,22 +1,19 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
-  def whoops
-    render :new
-    flash[:notice] = "There was a problem saving this meeting."
-  end
-
   def new
     @meeting = Meeting.new
+    @execs = current_user.execs.alphabetize_array if current_user
   end
 
   def create
-    @meeting = Event.new(event_params)
+    @meeting = Meeting.new(meeting_params)
     if @meeting.save
-      redirect_to meeting_path
+      redirect_to meeting_path(@meeting)
       flash[:notice] = "You've created a new meeting!"
     else
-      whoops
+      flash[:notice] = "There was a problem saving this meeting."
+      render :new
     end
   end
 

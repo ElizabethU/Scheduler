@@ -1,4 +1,5 @@
 class Meeting < ActiveRecord::Base
+  validates :exec_id, presence: true
   #alias_method :starts_at, :start
   extend SimpleCalendar
   has_calendar :attribute => :start

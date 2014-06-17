@@ -1,7 +1,16 @@
 <div class='col-lg-3'></div>
   <div class='signup-form col-lg-6'>
     <h1>Schedule Meeting</h1>
-    <%= render 'form' %>
+
+    <% if current_user && current_user.admin && current_user.execs.count > 0 %>
+      <%= render 'form' %>
+
+    <% else %>
+      It looks like you don't have any executives to create meetings for, why not go <%= link_to 'Register an Executive', new_exec_path %>?
+    <% end %>
+  <br>
+  <br>
+
   </div>
 <div class='col-lg-3'></div>
 
