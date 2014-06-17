@@ -10,6 +10,7 @@ describe 'home page navigation' do
     fill_in "Password", with: "MyString"
     click_button "Log In"
     expect(current_path).to eq "/"
+    click_button "Schedule Meeting"
 
   end
 
