@@ -10,6 +10,7 @@ Scheduler::Application.routes.draw do
   get "meetings/:id"   =>'meetings#show',      as: 'meeting'
   get "sign_up"        => "users#new",         as: "sign_up"
   get "/login"         => "sessions#new",      as: "login"
+  post "/login"        => "sessions#create"
   get "/logout"        => "sessions#destroy",  as: "logout"
 
 
