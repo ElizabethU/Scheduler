@@ -1,49 +1,7 @@
-<h3>Create a New Meeting</h3>
-<%= form_for(@meeting) do |f| %>
-  <% if @meeting.errors.any? %>
-    <div class="error_messages">
-      <h2><%= pluralize(@meeting.errors.count, "error") %> prohibited this meeting from being saved:</h2>
-      <ul>
-        <% @meeting.errors.full_messages.each do |message| %>
-          <li> <%= message %> </li>
-        <% end %> 
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :start %><br>
-    <h6>YYYY-MM-DD HH:MM</h6>
-    <h6>Ex: 2014-03-05 08:30AM</h6>
-    <%= f.datetime_local_field :start %>
+<div class='col-lg-3'></div>
+  <div class='signup-form col-lg-6'>
+    <h1>Schedule Meeting</h1>
+    <%= render 'form' %>
   </div>
+<div class='col-lg-3'></div>
 
-  <div class="field">
-    <%= f.label :duration_in_minutes %><br>
-    <%= f.number_field :duration %>
-  </div>
-
-  <br>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-
-  <br>
-
-    <% if current_user && current_user.admin == true && current_user.execs > 0 %>
-    <select>
-      <% current_user.execs.each do |exec| %>
-        <option value=<%=exec.id%>><%=exec.name%></option>
-      <% end %>
-      Executive you want not here? <%= link_to 'Register an Executive', new_exec_path %>
-    </select>
-    <% else %>
-      It looks like you don't have any executives to create meetings for, why not go <%= link_to 'Register an Executive', new_exec_path %>?
-    <% end %>
-  <br>
-  <br>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
