@@ -1,0 +1,13 @@
+<div class='calendar-container col-md-8'>
+  <div class='calendar'>
+    <%= month_calendar events: @meetings do |date, meetings| %>
+      <%= date.strftime('%d') %>
+        <% meetings.each do |meeting| %>
+          <div>
+            <%= link_to meeting.exec.name, meeting_path(meeting) %>
+            <%= link_to meeting.start.strftime('%I:%M %p'), meeting_path(meeting) %>
+          </div>
+       <% end %>
+    <% end %>
+  </div>
+</div>

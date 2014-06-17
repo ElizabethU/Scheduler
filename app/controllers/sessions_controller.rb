@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
 			flash[:notice] = "You have successfully signed in!"
-			redirect_to meetings_path
+			redirect_to root_path
 		else
 			flash[:notice] = "Invalid email/password. Please try again."
 			redirect_to root_path

@@ -1,22 +1,49 @@
-// Place all the styles related to the meetings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-td.day{
-  border-right  : 1px solid #A2ADBC;
-  border-bottom : 1px solid #A2ADBC;
-  width         : 10%;
-  height        : 120px;
-  vertical-align: top;
-  background-color: #9CD9B6;
+.prev-month {
+  background-color: #D5E0DD;
 }
 
-td.today {
-  color      : #F6F4DA;
-  background-color: #60BF88;
+.next-month {
+  background-color: #D5E0DD;
+}
+
+.calendar thead tbody {
+  width: 100%;
 }
 
 .calendar-header {
+  text-align: center;
+  margin: 20px;
   font-size: 24px;
+  padding: 0 20%;
 }
 
+.calendar-header span {
+  padding: 10px 10%;
+}
+
+.calendar-container table {
+  width: 100%;
+}
+
+.calendar-container thead {
+  background-color: #32957B;
+  color: white;
+}
+
+.calendar-container thead th {
+  text-align: center;
+}
+
+/* individual cell formatting - EU's work*/
+.day {
+  border        : 1px solid #A2ADBC;
+  width         : 14%;
+  height        : 120px;
+  vertical-align: top;
+  text-align: right;
+}
+
+td.today {
+  color           : #F6F4DA;
+  background-color: #60BF88;
+}
