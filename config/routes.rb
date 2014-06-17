@@ -5,9 +5,10 @@ Scheduler::Application.routes.draw do
   resources :users
   resources :sessions
 
-  get   "meetings/new"
-  get   "meetings/edit"
+  get   "meetings/new"   => 'meetings#new',      as: 'new_meeting'
   get   "meetings"       =>'meetings#index',     as: 'meetings'
+  post  "meetings"       => 'meetings#create'
+  # get   "meetings/edit"
   get   "meetings/:id"   =>'meetings#show',      as: 'meeting'
 
   get   "sign_up"        => "users#new",         as: "sign_up"
@@ -17,7 +18,7 @@ Scheduler::Application.routes.draw do
 
   get   "execs/new"      =>'execs#new', as: 'new_exec'
   get   "execs/edit"
-  get   "execs/:id"     => 'execs#show', as: 'exec'
+  get   "execs/:id"      => 'execs#show', as: 'exec'
   get   "execs"          => "execs#index"
 
 end
