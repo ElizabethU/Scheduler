@@ -28,6 +28,7 @@ class MeetingsController < ApplicationController
 
   def index
     @meetings = Meeting.all
+    render :partial => 'index'
   end
 
   def show

@@ -1,21 +1,14 @@
-<div class='container-fluid'>
-  <div class='row'>
-    <div class='col-md-2'></div>
-    <div class='calendar-container col-md-8'>
-      <h1 class='text-center'>Meetings</h1>
-      <div class='calendar'>
-        <%= link_to "Search Executives for Meeting Times", execs_path %>
-        <%= month_calendar events: @meetings do |date, meetings| %>
-          <%= date.strftime('%d') %>
-            <% meetings.each do |meeting| %>
-              <div>
-                <%= link_to meeting.exec.name, meeting_path(meeting) %>
-                <%= link_to meeting.start.strftime('%I:%M %p'), meeting_path(meeting) %>
-              </div>
-           <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div class='col-md-2'></div>
+<div class='calendar-container col-md-8'>
+  <h1 class='text-center'>Meetings</h1>
+  <div class='calendar'>
+    <%= month_calendar events: @meetings do |date, meetings| %>
+      <%= date.strftime('%d') %>
+        <% meetings.each do |meeting| %>
+          <div>
+            <%= link_to meeting.exec.name, meeting_path(meeting) %>
+            <%= link_to meeting.start.strftime('%I:%M %p'), meeting_path(meeting) %>
+          </div>
+       <% end %>
+    <% end %>
   </div>
 </div>
