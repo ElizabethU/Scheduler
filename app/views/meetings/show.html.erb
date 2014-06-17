@@ -1,6 +1,8 @@
-Date: <%= @meeting.start.strftime("%A, %B %e") %><br>
-Time: <%= @meeting.start.strftime("%l:%M %P") + " - " + (@meeting.start + 30.minutes).strftime("%l:%M %P")%><br>
-Executive: <%= @meeting.exec.name %><br>
-Available? <%= @meeting.user_id == nil %><br>
-<br>
-Add button to reserve this time.
+<div class='col-lg-3'></div>
+  <div class='show col-lg-6'>
+  <h1>Meeting with <%=link_to @meeting.exec.name, exec_path(@meeting.exec.id) %></h1>
+    Date: <%= @meeting.start.getlocal.strftime("%A, %B %e") %><br>
+    Time: <%= @meeting.start.getlocal.strftime("%l:%M %P") + " - " + (@meeting.start + 30.minutes).getlocal.strftime("%l:%M %P")%><br>
+    Available? <%= @meeting.user_id == nil %>
+  </div>
+<div class='col-lg-3'></div>
