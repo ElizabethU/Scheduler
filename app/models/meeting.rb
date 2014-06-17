@@ -6,6 +6,8 @@ class Meeting < ActiveRecord::Base
   belongs_to :exec
   belongs_to :user
 
+  scope :available, -> { where(user_id: nil) }
+
   def available?
     user_id == nil
   end

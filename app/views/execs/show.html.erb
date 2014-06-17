@@ -2,5 +2,10 @@
   <div class='show col-lg-6'>
   <h1><%= @exec.name %> <small><%=@exec.email %></small></h1>
   <h2>Available Times:</h2>
+  <ul>
+    <% @exec.meetings.available.each do |meeting| %>
+      <li><%= meeting.start.getlocal.strftime( "%l:%M %p %a on %d %b %Y") %></li>
+    <% end %>
+  </ul>
   </div>
 <div class='col-lg-3'></div>
