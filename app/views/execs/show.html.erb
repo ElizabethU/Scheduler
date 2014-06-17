@@ -1,14 +1,14 @@
 <div class='col-lg-3'></div>
-  <div class='show col-lg-6'>
+  <div class='show exec-show col-lg-6'>
   <h1><%= @exec.name %> <small><%=@exec.email %></small></h1>
   <h2>Available Times:</h2>
-  <ul>
+  <table class='exec-schedule'>
     <% @exec.meetings.available.each do |meeting| %>
-      <li>
-        <%= meeting.start.getlocal.strftime("%l:%M %p %a on %d %b %Y") %>
-        <%= link_to "Claim!", claim_slot_path(meeting: meeting.id), method: 'post', class: 'btn btn-default' %>
-      </li>
+      <tr>
+        <td><%= meeting.start.getlocal.strftime("%l:%M %p %a on %d %b %Y") %></td>
+        <td><%= link_to "Claim!", claim_slot_path(meeting: meeting.id), method: 'post', class: 'btn btn-default' %></td>
+      </tr>
     <% end %>
-  </ul>
+  </table>
   </div>
 <div class='col-lg-3'></div>
