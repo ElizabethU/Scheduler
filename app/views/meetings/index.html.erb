@@ -3,11 +3,11 @@
 <div class="container">
   <h4><%= link_to "Search Executives for Meeting Times", execs_path %></h4>
   <%= month_calendar events: @meetings do |date, meetings| %>
-    <%= date %>
+    <%= date.strftime('%d') %>
       <% meetings.each do |meeting| %>
         <div>
           <%= link_to meeting.exec.name, meeting_path(meeting) %>
-          <%= link_to meeting.start, meeting_path(meeting) %>
+          <%= link_to meeting.start.strftime('%I:%M %p'), meeting_path(meeting) %>
         </div>
       <% end %>
   <% end %>

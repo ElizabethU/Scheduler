@@ -2,16 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.calendar td {
+td.day{
   border-right  : 1px solid #A2ADBC;
   border-bottom : 1px solid #A2ADBC;
   width         : 10%;
-  height        : 10%;
+  height        : 120px;
   vertical-align: top;
   background-color: #9CD9B6;
 }
 
-.calendar td.today {
+td.today {
   color      : #F6F4DA;
   background-color: #60BF88;
 }
+
+.calendar-header {
+  font-size: 24px;
+}
+
