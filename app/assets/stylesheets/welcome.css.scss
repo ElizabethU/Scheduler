@@ -13,6 +13,7 @@
 }
 
 .modal-container .content {
+  background-color: white;
   position: fixed;
   width: 30%;
   left: 35%;
@@ -45,4 +46,8 @@
 
 .current-user a:visited {
   color: #BDBDBD;
+}
+
+.sidebar {
+  border: 1px solid blue;
 }
