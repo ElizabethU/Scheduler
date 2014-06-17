@@ -4,7 +4,10 @@
   <h2>Available Times:</h2>
   <ul>
     <% @exec.meetings.available.each do |meeting| %>
-      <li><%= meeting.start.getlocal.strftime( "%l:%M %p %a on %d %b %Y") %></li>
+      <li>
+        <%= meeting.start.getlocal.strftime("%l:%M %p %a on %d %b %Y") %>
+        <%= link_to "Claim!", claim_slot_path(meeting: meeting.id), method: 'post', class: 'btn btn-default' %>
+      </li>
     <% end %>
   </ul>
   </div>

@@ -10,6 +10,7 @@ Scheduler::Application.routes.draw do
   post  'meetings'       => 'meetings#create'
   # get   'meetings/edit'
   get   'meetings/:id'   => 'meetings#show',     as: 'meeting'
+  post  '/schedule'      => 'meetings#reserve',  as: 'claim_slot'
 
   get   'sign_up'        => 'users#new',         as: 'sign_up'
   get   '/login'         => 'sessions#new',      as: 'login'
