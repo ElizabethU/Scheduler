@@ -17,7 +17,7 @@ Scheduler::Application.routes.draw do
 
   get   "execs/new"      =>'execs#new', as: 'new_exec'
   get   "execs/edit"
-  get   "execs/show"
+  get   "execs/:id"     => 'execs#show', as: 'exec'
   get   "execs"          => "execs#index"
 
 end

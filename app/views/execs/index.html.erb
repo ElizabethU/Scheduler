@@ -3,7 +3,7 @@
     <h1>Executives:</h1>
     <ul>
       <% @execs.each do |exec| %>
-      <li><%= exec.name %> |
+      <li><%=link_to exec.name, exec_path(exec) %> |
         <%= exec.email %>
       </li>
       <% end %>

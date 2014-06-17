@@ -12,6 +12,7 @@ class ExecsController < ApplicationController
   end
 
   def show
+    @exec = Exec.find(params[:id])
   end
 
   def index
