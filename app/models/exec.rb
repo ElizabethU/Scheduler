@@ -7,7 +7,7 @@ class Exec < ActiveRecord::Base
   end
 
   def self.alphabetize
-    self.all.sort_by{ |composer| composer.name }
+    self.all.sort_by{ |exec| exec.name }
   end
 
 end
