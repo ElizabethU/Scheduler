@@ -15,7 +15,6 @@ Scheduler::Application.routes.draw do
   post  "/login"         => "sessions#create"
   get   "/logout"        => "sessions#destroy",  as: "logout"
 
-
   get   "execs/new"      =>'execs#new', as: 'new_exec'
   get   "execs/edit"
   get   "execs/show"
