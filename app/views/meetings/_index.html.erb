@@ -4,8 +4,7 @@
       <%= date.strftime('%d') %>
         <% meetings.each do |meeting| %>
           <div>
-            <%= link_to meeting.exec.name, meeting_path(meeting) %>
-            <%= link_to meeting.start.strftime('%I:%M %p'), meeting_path(meeting) %>
+            <%= link_to "#{meeting.exec.name + " " + meeting.start.strftime('%I:%M %p')}", meeting_path(meeting), class: 'timeslot', data: { exec_id: meeting.exec.id } %>
           </div>
        <% end %>
     <% end %>

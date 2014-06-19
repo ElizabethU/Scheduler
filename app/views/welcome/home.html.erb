@@ -4,7 +4,7 @@
     	<div class='sidebar'>
         <ul>
           <% @execs.each do |exec| %>
-            <li><%=link_to exec.name, exec_path(exec) %></li>
+            <li><%=link_to exec.name, "#", class: 'exec',  data: { exec_id: exec.id } %></li>
           <% end %>
         </ul>
 			  	<%#= link_to "Executives Index", execs_path, class: 'btn btn-default' %>
