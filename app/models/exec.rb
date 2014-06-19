@@ -14,4 +14,8 @@ class Exec < ActiveRecord::Base
     self.all.sort_by { |exec| exec.name }
   end
 
+  def scheduled
+    meetings.where.not(user_id: nil)
+  end
+
 end
