@@ -4,7 +4,18 @@
       <%= date.strftime('%d') %>
         <% meetings.each do |meeting| %>
           <div>
-            <%= link_to "#{meeting.exec.name + " " + meeting.start.strftime('%I:%M %p')}", meeting_path(meeting), class: 'timeslot', data: { exec_id: meeting.exec.id } %>
+            <%= link_to "#{meeting.exec.name + " " + meeting.start.strftime('%I:%M %p')}","#", class: 'timeslot', data: { exec_id: meeting.exec.id } %>
+            <div class='popover'>
+              <h3><%=link_to meeting.exec.name, exec_path(meeting.exec.id) %></h3>
+              <ul>
+                <li>Date: <%= meeting.start.strftime("%A, %B %e") %></li>
+                <li>Time: <%= meeting.start.strftime("%l:%M %P") + " - " + (meeting.start + 30.minutes).strftime("%l:%M %P")%></li>
+                <% if current_user %>
+                  <li><%= link_to "Claim!", claim_slot_path(meeting: meeting.id), method: 'post', class: 'btn btn-default' %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
           </div>
        <% end %>
     <% end %>
