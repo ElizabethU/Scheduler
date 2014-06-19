@@ -1,6 +1,6 @@
 <div class='col-lg-3'></div>
   <div class='show exec-show col-lg-6'>
-    <h1><%= @exec.name %> <small><%=@exec.email %></small></h1>
+    <h1><%= @exec.name %> <small><%=@exec.email %></small></h1><hr>
     <% if @exec.user == current_user %>
       <div>
         <h2>Scheduled meetings</h2>
@@ -16,8 +16,8 @@
         <div>
           <%= link_to "Add timeslot", new_meeting_path, class: 'btn btn-default' %>
         </div>
-      <% end %>
-    </div>
+      </div><hr>
+    <% end %>
 
     <div>
       <h2>Available Times:</h2>
