@@ -7,7 +7,7 @@
           <table class='exec-schedule'>
           <% @scheduled.each do |meeting| %>
             <tr>
-              <td><%= meeting.start.getlocal.strftime("%l:%M %p %a on %d %b %Y") %></td>
+              <td><%= meeting.start.strftime("%l:%M %p %a on %d %b %Y") %></td>
               <td><%= meeting.user.name %></td>
               <td><%= meeting.user.email %></td>
             </tr>
@@ -24,7 +24,7 @@
       <table class='exec-schedule'>
         <% @meetings.each do |meeting| %>
           <tr>
-            <td><%= meeting.start.getlocal.strftime("%l:%M %p %a on %d %b %Y") %></td>
+            <td><%= meeting.start.strftime("%l:%M %p %a on %d %b %Y") %></td>
             <td><%= link_to "Claim!", claim_slot_path(meeting: meeting.id), method: 'post', class: 'btn btn-default' %></td>
           </tr>
         <% end %>
