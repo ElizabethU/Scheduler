@@ -31,8 +31,9 @@
         (New user? <%= link_to "Sign up", sign_up_path %>.)
       </div>
     </div>
-
-    <div class="flash text-center bg-warning"><%= flash.notice %></div>
+    <% if flash.notice %>
+      <div class="alert alert-warning flash text-center"><%= flash.notice %></div>
+    <% end %>
     <%= yield %>
 
   </body>
