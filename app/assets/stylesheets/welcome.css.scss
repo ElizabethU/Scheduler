@@ -63,23 +63,25 @@
 }
 
 .sidebar li.selected {
-  color: white;
   font-weight: bold;
   background-color: #32957B;
 }
 
+.sidebar li.selected a {
+  color: white;
+}
 .sidebar a:hover {
-  color: blue;
+  color: black;
   background-color: transparent;
   text-decoration: none;
   font-weight: bold;
 }
 
-.sidebar a:visited {
-  color: black;
-}
-
 a {
   padding: 5px;
+}
+
+.timeslot:hover {
+  background-color: #32957B;
 }
 
