@@ -12,7 +12,7 @@ $ ->
     console.log(xOffset, yOffset)
     claimbox.css({
       marginLeft: -xOffset - 10,
-      marginTop: -yOffset - 40
+      marginTop: -yOffset - 50
     })
     claimbox.show()
     return false
