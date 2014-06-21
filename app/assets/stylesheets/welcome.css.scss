@@ -50,7 +50,6 @@
 
 .sidebar {
   margin-top: 50px;
-  /*border: 1px solid black;*/
 }
 
 .sidebar ul {
@@ -63,10 +62,21 @@
   font-size: 16px;
 }
 
-a.active{
+.sidebar li.selected {
   color: white;
   font-weight: bold;
   background-color: #32957B;
+}
+
+.sidebar a:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar a:visited {
+  color: black;
 }
 
 a {
