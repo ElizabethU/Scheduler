@@ -2,7 +2,7 @@ $ ->
 
   $(".exec").click ->
     $('.background').show()
-    $('.popover').hide()
+    $('.claimbox').hide()
     id = $(this).data('exec-id')
     timeslots = $(".timeslot[data-exec-id=#{id}]")
     $('.timeslot').hide()

@@ -52,6 +52,17 @@ td.today {
   width: 50%;
 }
 
-.popover {
-  position: fixed;
+.claimbox {
+  display: none;
+  position: absolute;
+  background-color: papayawhip;
+  text-align: left;
+  min-width: 200px;
+  padding: 10px;
+}
+
+
+.claimbox ul {
+  list-style-type: none;
+  padding: 0;
 }

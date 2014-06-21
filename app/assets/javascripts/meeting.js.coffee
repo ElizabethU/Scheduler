@@ -1,8 +1,14 @@
 $ ->
-  $('.timeslot').click ->
+  $('.timeslot').click (e)->
+    x = e.clientX
+    y = e.clientY
     $('.background').show()
-    $('.popover').hide()
-    popover = $(this).siblings(".popover")
-    popover.show()
+    $('.claimbox').hide()
+    claimbox = $(this).siblings(".claimbox")
+    width = claimbox.width()
+    height = claimbox.height()
+    console.log(width, height)
+
+    claimbox.show()
     return false
 
