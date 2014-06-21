@@ -48,3 +48,13 @@
  .show {
     border: 1px solid black;
  }
+
+ .background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: papayawhip;
+    opacity: .5;
+
+ }
