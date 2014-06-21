@@ -1,10 +1,10 @@
 $ ->
   $(".open-modal").click ->
-    $('.popover').hide()
+    $('.claimbox').hide()
     $(".modal-container").show()
     false
 
   $(".close-modal").click ->
     $(".modal-container").hide()
-    $(".popover").hide()
+    $(".claimbox").hide()
     $(this).hide()
