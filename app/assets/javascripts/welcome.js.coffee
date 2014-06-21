@@ -10,3 +10,6 @@ $ ->
     $(".exec").removeClass('active')
     $(this).addClass('active')
     return false
+
+  $(".close-icon").click ->
+    $('.claimbox').hide()

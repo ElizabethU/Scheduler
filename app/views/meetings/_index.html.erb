@@ -6,6 +6,7 @@
           <div>
             <%= link_to "#{meeting.exec.name + " " + meeting.start.strftime('%I:%M %p')}","#", class: 'timeslot', data: { exec_id: meeting.exec.id } %>
             <div class='claimbox'>
+              <%= link_to '[X]', "#", class: 'close-icon' %>
               <h3><%=link_to meeting.exec.name, exec_path(meeting.exec.id) %></h3>
               <ul>
                 <li>Date: <%= meeting.start.strftime("%A, %B %e") %></li>
