@@ -2,6 +2,7 @@
   <div class='row'>
     <div class='col-md-3'>
     	<div class='sidebar'>
+        <h2><%=link_to "All Executives", root_path %></h2>
         <ul>
           <% @execs.each do |exec| %>
             <li><%=link_to exec.name, "#", class: 'exec',  data: { exec_id: exec.id } %></li>
