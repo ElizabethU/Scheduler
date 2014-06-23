@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  # include admin privileges for user index to assign admins
   def index
     @users = User.all
   end
@@ -10,9 +11,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-  end
-
-  def edit
   end
 
   def create
@@ -25,6 +23,9 @@ class UsersController < ApplicationController
       flash[:notice] = 'There was a problem creating your account!'
       render :new
     end
+  end
+
+  def edit
   end
 
   def update

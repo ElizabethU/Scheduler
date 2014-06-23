@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def home
-    @meetings = Meeting.all
+    @meetings = Meeting.available
+    @execs = Exec.all
   end
 end

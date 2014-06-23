@@ -49,5 +49,46 @@
 }
 
 .sidebar {
-  border: 1px solid blue;
+  margin-top: 50px;
+  border: 1px solid black;
+  top: 0;
 }
+
+.sidebar h2 {
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.sidebar li.selected {
+  font-weight: bold;
+  background-color: #32957B;
+}
+
+.sidebar li.selected a {
+  color: white;
+}
+.sidebar a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a {
+  padding: 5px;
+}
+
+.timeslot:hover {
+  background-color: #32957B;
+}
+

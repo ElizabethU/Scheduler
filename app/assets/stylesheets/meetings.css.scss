@@ -10,6 +10,9 @@
   width: 100%;
 }
 
+.calendar {
+}
+
 .calendar-header {
   text-align: center;
   margin: 20px;
@@ -46,4 +49,28 @@
 td.today {
   color           : #F6F4DA;
   background-color: #60BF88;
+}
+
+.form input {
+  width: 50%;
+}
+
+.claimbox {
+  display: none;
+  position: absolute;
+  background-color: papayawhip;
+  text-align: left;
+  min-width: 200px;
+  padding: 10px;
+  border: 1px solid #A2ADBC;
+  border-radius: 10px;
+}
+
+.claimbox ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.close-icon {
+  float: right;
 }

@@ -1,12 +1,12 @@
-<div class='row'>
-  <div class='col-lg-12'>
-    <h1>Executives:</h1>
-    <ul>
-      <% @execs.each do |exec| %>
-      <li><%= exec.name %> |
-        <%= exec.email %>
-      </li>
-      <% end %>
-    </ul>
-  </div>
+<div class='col-lg-3'></div>
+<div class='show col-lg-6'>
+  <h1 class='text-center'>Executives</h1><hr>
+  <ul>
+    <% @execs.each do |exec| %>
+    <li><%=link_to exec.name, exec_path(exec) %> |
+      <%= exec.email %>
+    </li>
+    <% end %>
+  </ul>
 </div>
+<div class='col-lg-3'></div>
